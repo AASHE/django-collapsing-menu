@@ -62,7 +62,7 @@ Menu items, at each level, can have the following properties
       
 ``title``: the name displayed for the link
           
-*Optional*::
+*Optional*
       
 ``url``
 
