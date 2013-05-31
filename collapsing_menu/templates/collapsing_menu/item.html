@@ -1,0 +1,33 @@
+<li{% if item.attrs %}
+	{% for key, value in item.attrs.items %}
+    	{{ key }}="{{ value }}"
+	{% endfor %}{% endif %}>
+
+	{% if item.children %}
+		<label class="tree-toggler nav-header">
+	{% endif %}
+	{% if item.url %}
+		<a href='{{ item.url }}'>
+	{% endif %}
+
+		{{ item.title }}
+
+	{% if item.url %}
+		</a>
+	{% endif %}
+	{% if item.children %}
+		</label>
+
+		<ul class="nav nav-list tree"{% if item.children_attrs %}
+			{% for key, value in item.children_attrs.items %}
+		    	{{ key }}="{{ value }}"
+			{% endfor %}{% endif %}>
+
+			{% for child in item.children %}
+				{% with item=child %}{% with template_name="collapsing_menu/item.html" %}
+					{% include template_name %}
+				{% endwith %}{% endwith %}
+			{% endfor %}
+		</ul>
+	{% endif %}	
+</li>
