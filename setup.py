@@ -15,8 +15,8 @@ setup(name='django-collapsing-menu',
       license='LICENSE',
       long_description=read("README.rst"),
       packages=[
-        'collapsing-menu',
-        'collapsing-menu.templatetags',
+        'collapsing_menu',
+        'collapsing_menu.templatetags',
         ],
       install_requires=[
               "Django >= 1.3",
