@@ -9,7 +9,7 @@ Installation
 
 Use ``pip`` to install from repository::
 
-	-e hg+ssh://hg@bitbucket.org/aashe/django-collapsing-menu#egg=django-collapsing-menu-dev
+	-e git+https://github.com/AASHE/django-collapsing-menu.git#egg=django-collapsing-menu-dev
 
 Add ``collapsing_menu`` to your settings.py file::
 
